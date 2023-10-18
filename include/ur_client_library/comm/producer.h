@@ -69,7 +69,7 @@ public:
   {
     timeval tv;
     tv.tv_sec = 1;
-    tv.tv_usec = 0;
+    tv.tv_usec = 500000;
     stream_.setReceiveTimeout(tv);
     if (!stream_.connect(max_num_tries, reconnection_time))
     {

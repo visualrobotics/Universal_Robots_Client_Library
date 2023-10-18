@@ -174,7 +174,7 @@ bool RTDEClient::negotiateProtocolVersion(const uint16_t protocol_version)
   while (num_retries < MAX_REQUEST_RETRIES)
   {
     std::unique_ptr<RTDEPackage> package;
-    if (!pipeline_.getLatestProduct(package, std::chrono::milliseconds(1000)))
+    if (!pipeline_.getLatestProduct(package, std::chrono::milliseconds(1500)))
     {
       URCL_LOG_ERROR("failed to get package from rtde interface, disconnecting");
       disconnect();
